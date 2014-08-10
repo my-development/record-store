@@ -51,8 +51,8 @@ search_result.each do |r|
   puts "Released: #{r.release_year}"
   
   format_count = find_count_each_format(r)  
-  puts "CD(#{format_count[:cd][:quantity]}): #{format_count[:cd][:id]}" if format_count.has_key?(:cd)
-  puts "Tape(#{format_count[:tape][:quantity]}): #{format_count[:tape][:id]}"  if format_count.has_key?(:tape)
-  puts "Vinyl(#{format_count[:vinyl][:quantity]}): #{format_count[:vinyl][:id]}" if format_count.has_key?(:vinyl)
+  puts " Format: CD Quantity: #{format_count[:cd][:quantity]} InventoryId: #{format_count[:cd][:id]}" if format_count.has_key?(:cd)
+  puts " Format Tape Quantity: #{format_count[:tape][:quantity]} InventoryId: #{format_count[:tape][:id]}"  if format_count.has_key?(:tape)
+  puts " Format: Vinyl Quantity: #{format_count[:vinyl][:quantity]} InventoryId: #{format_count[:vinyl][:id]}" if format_count.has_key?(:vinyl)
   puts "\n"
 end
